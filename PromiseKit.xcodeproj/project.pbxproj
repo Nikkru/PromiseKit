@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		2E52883D27B5A00B000AB068 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E52883B27B5A00B000AB068 /* Main.storyboard */; };
 		2E52883F27B5A010000AB068 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E52883E27B5A010000AB068 /* Assets.xcassets */; };
 		2E52884227B5A010000AB068 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E52884027B5A010000AB068 /* LaunchScreen.storyboard */; };
+		2E52884B27B5A076000AB068 /* BlurImageOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52884A27B5A076000AB068 /* BlurImageOperation.swift */; };
+		2E52884E27B5A5B3000AB068 /* GetDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52884D27B5A5B3000AB068 /* GetDataOperation.swift */; };
+		2E52885227B5A7D8000AB068 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2E52885127B5A7D8000AB068 /* Alamofire */; };
+		2E52885527B658F8000AB068 /* ParseDataOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E52885427B658F8000AB068 /* ParseDataOperation.swift */; };
+		2E663D9027B6DD5F00F84783 /* OperationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E663D8F27B6DD5E00F84783 /* OperationViewController.swift */; };
+		2E6A0B7A27B80C2D003A9348 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 2E6A0B7927B80C2D003A9348 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		2E52883E27B5A010000AB068 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E52884127B5A010000AB068 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E52884327B5A010000AB068 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E52884A27B5A076000AB068 /* BlurImageOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurImageOperation.swift; sourceTree = "<group>"; };
+		2E52884D27B5A5B3000AB068 /* GetDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataOperation.swift; sourceTree = "<group>"; };
+		2E52885427B658F8000AB068 /* ParseDataOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseDataOperation.swift; sourceTree = "<group>"; };
+		2E663D8F27B6DD5E00F84783 /* OperationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6A0B7A27B80C2D003A9348 /* SwiftyJSON in Frameworks */,
+				2E52885227B5A7D8000AB068 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,27 @@
 		2E52883427B5A00A000AB068 /* PromiseKit */ = {
 			isa = PBXGroup;
 			children = (
-				2E52883527B5A00A000AB068 /* AppDelegate.swift */,
-				2E52883727B5A00A000AB068 /* SceneDelegate.swift */,
 				2E52883927B5A00A000AB068 /* ViewController.swift */,
+				2E663D8F27B6DD5E00F84783 /* OperationViewController.swift */,
+				2E52884D27B5A5B3000AB068 /* GetDataOperation.swift */,
+				2E52884A27B5A076000AB068 /* BlurImageOperation.swift */,
 				2E52883B27B5A00B000AB068 /* Main.storyboard */,
 				2E52883E27B5A010000AB068 /* Assets.xcassets */,
-				2E52884027B5A010000AB068 /* LaunchScreen.storyboard */,
 				2E52884327B5A010000AB068 /* Info.plist */,
+				2E52885427B658F8000AB068 /* ParseDataOperation.swift */,
+				2E663D9227B6DD7F00F84783 /* Application */,
 			);
 			path = PromiseKit;
+			sourceTree = "<group>";
+		};
+		2E663D9227B6DD7F00F84783 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2E52883527B5A00A000AB068 /* AppDelegate.swift */,
+				2E52883727B5A00A000AB068 /* SceneDelegate.swift */,
+				2E52884027B5A010000AB068 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +107,10 @@
 			dependencies = (
 			);
 			name = PromiseKit;
+			packageProductDependencies = (
+				2E52885127B5A7D8000AB068 /* Alamofire */,
+				2E6A0B7927B80C2D003A9348 /* SwiftyJSON */,
+			);
 			productName = PromiseKit;
 			productReference = 2E52883227B5A00A000AB068 /* PromiseKit.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +138,10 @@
 				Base,
 			);
 			mainGroup = 2E52882927B5A00A000AB068;
+			packageReferences = (
+				2E52885027B5A7D8000AB068 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2E6A0B7827B80C2D003A9348 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 2E52883327B5A00A000AB068 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E52884B27B5A076000AB068 /* BlurImageOperation.swift in Sources */,
 				2E52883A27B5A00A000AB068 /* ViewController.swift in Sources */,
 				2E52883627B5A00A000AB068 /* AppDelegate.swift in Sources */,
+				2E52885527B658F8000AB068 /* ParseDataOperation.swift in Sources */,
 				2E52883827B5A00A000AB068 /* SceneDelegate.swift in Sources */,
+				2E52884E27B5A5B3000AB068 /* GetDataOperation.swift in Sources */,
+				2E663D9027B6DD5F00F84783 /* OperationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +377,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2E52885027B5A7D8000AB068 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.4;
+			};
+		};
+		2E6A0B7827B80C2D003A9348 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E52885127B5A7D8000AB068 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E52885027B5A7D8000AB068 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2E6A0B7927B80C2D003A9348 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2E6A0B7827B80C2D003A9348 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E52882A27B5A00A000AB068 /* Project object */;
 }
